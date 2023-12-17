@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspire Me!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+  <main>
+    <div id="quote-container">
+      <canvas id="quote-canvas"></canvas>
+      <div id="quote-overlay">
+        <h1 id="quote-text">Generating...</h1>
+        <p id="quote-author"></p>
+      </div>
+      <button id="generate-btn">Get Inspired!</button>
+    </div>
+  </main>
+  <script src="script.js" defer></script>
 </body>
 </html>
