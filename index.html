@@ -1,50 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Quote Inspiration</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quote Inspiration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Quote Inspiration</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Quote Archive</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Sign Up</a></li>
-			</ul>
-		</nav>
-		<button id="signup-btn">Sign up for daily quote updates</button>
-	</header>
-	
-	<section class="quote-section">
-		<div class="quote-card">
-			<!-- <img src="" alt="Motivation" id="background"> -->
-			<p id="quote"></p>
-			<span id="author"></span>
-			<div class="quote-actions">
-				<button id="new-quote-btn">New Quote</button>
-				<a href="#" id="tweet-quote"><i class="fab fa-twitter"></i> Tweet</a>
-			</div>
-		</div>
-	</section>
+    <header>
+        <h1>Daily Quote Inspiration</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="quote-section">
+            <div class="quote-card animated-card">
+                <div class="quote-overlay">
+                    <p id="quote">"The best way to predict the future is to create it." - Peter Drucker</p>
+                    <span id="author">- Peter Drucker</span>
+                    <div class="quote-actions">
+                        <button id="new-quote-btn">New Quote</button>
+                        <button id="download-quote-btn">Download</button>
+                        <a href="#" id="tweet-quote"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="linkedin-quote"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" id="instagram-quote"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<section class="about-section">
-		<h2>About Quote Inspiration</h2>
-		<p>Quote Inspiration is a website dedicated to providing daily inspiration and motivation through quotes from famous authors, speakers, and thought leaders. Our mission is to help people lead happier, more fulfilling lives by sharing the wisdom of those who have come before us.</p>
-	</section>
+        <section class="unique-section">
+            <h2>Unique Features</h2>
+            <div class="unique-features">
+                <div class="feature-card">
+                    <i class="fas fa-brain"></i>
+                    <p>Daily Motivation</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-share-alt"></i>
+                    <p>Easy Sharing</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-download"></i>
+                    <p>Downloadable Quotes</p>
+                </div>
+            </div>
+        </section>
 
-	<footer>
-		<ul>
-			<li><a href="#">Terms and Conditions</a></li>
-			<li><a href="#">Privacy Policy</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<li><a href="#">Follow Us</a></li>
-			<li><a href="#">Share</a></li>
-		</ul>
-	</footer>
+        <section class="contact-section" id="contact">
+            <h2>Contact Us</h2>
+            <form id="form" action="" method="post">
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <!-- <div class="h-captcha" data-captcha="true"></div> -->
+                <button type="submit">Submit Form</button>
+                <div id="result"></div>
+            </form>
+        </section>
+    </main>
 
-	<script src="script.js"></script>
+    <footer>
+        <ul>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Follow Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
